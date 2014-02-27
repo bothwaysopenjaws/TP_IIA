@@ -32,12 +32,13 @@ and open the template in the editor.
   */             
             
             
-            $oResultat = $odb->query('SELECT * FROM promotion ORDER BY PRO_NOM ASC');
+            $oResultat = $odb->query('SELECT * FROM promotion ORDER BY PRO_NOM ASC');        
             
-            
-            
-            while ($promotion = $oResultat->fetch()) {
-              echo '<p>', $promotion['PRO_NOM'], '</p>';              
+            echo 'liste des ', $oResultat->rowCount(), ' promotions de l\'IIA : ';
+            while ($promotion = $oResultat->fetch()) { // boucle qui affiche toutes les lignes
+              echo '<p>';
+              echo '<a href="promotion.php">', $promotion['PRO_NOM'], '</a>'; // href creer un lien hypertexte
+              echo '</p>';              
             } // fetch bouge le curseur et affiche la ligne
             
             
