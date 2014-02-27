@@ -13,6 +13,12 @@ and open the template in the editor.
         <h1> Liste des promotions </h1>
         
         
+          ajouter une classe  : <form method="post" action="" />
+            <input type="text" />
+             <input type="Submit" />         
+            
+        </form>
+        
         
         <?php
            $dns = 'mysql:host=localhost;dbname=iia';
