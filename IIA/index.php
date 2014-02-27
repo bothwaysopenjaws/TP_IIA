@@ -36,10 +36,12 @@ and open the template in the editor.
             
             
             
-            $promotion = $oResultat->fetch(); // fetch bouge le curseur et affiche la ligne
+            while ($promotion = $oResultat->fetch()) {
+              echo '<p>', $promotion['PRO_NOM'], '</p>';              
+            } // fetch bouge le curseur et affiche la ligne
             
             
-            echo '<p>', $promotion['PRO_NOM'], '</p>';
+
         
             
         ?>
