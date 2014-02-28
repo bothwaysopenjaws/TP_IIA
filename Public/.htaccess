@@ -1,0 +1,8 @@
+#Active le moteur de réécriture d'URL
+
+RewriteEngine On
+
+#règle de réecriture
+#redirige toutes les pages vers le front controller
+
+RewriteRule (.*).php Index.php?page=$1 [QSA,L]
