@@ -43,8 +43,7 @@ and open the template in the editor.
                     . 'ORDER BY ETU_NOM, ETU_PRE)'
                     . ' ORDER BY ETU_NOM, ETU_PRE');                     
             
-            $oResultat->execute( 'PRO_ID' => ($_GET['PRO_ID']),
-                    'PRO_NOM' => ($_GET['PRO_NOM']));
+            $oResultat->execute(array(':PRO_ID' => ($_GET['PRO_ID'])));
 
   
             echo 'liste des ', $oResultat->rowCount(), ' etudiant(s) de l\'IIA : ';

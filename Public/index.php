@@ -44,7 +44,7 @@ and open the template in the editor.
             echo 'liste des ', $oResultat->rowCount(), ' promotions de l\'IIA : ';
             while ($oPromotion = $oResultat->fetch()) { // boucle qui affiche toutes les lignes
               echo '<p>';
-                echo '<a href="promotion.php?PRO_ID=', $oPromotion->PRO_ID, '">';
+                echo '<a href="C://wamp/www/TP_IIA/promotion.php?PRO_ID=', $oPromotion->PRO_ID, '">';
                     echo $oPromotion->PRO_NOM;
                 echo '</a>'; // href creer un lien hypertexte
               echo '</p>';              
